@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainFragment" >
+
+    <TextView
+        android:id="@+id/tv_Bmi"
+        android:layout_width="379dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/Bmi_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_BeratBadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/berat_badan_kg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Bmi" />
+
+    <TextView
+        android:id="@+id/tv_TinggiBadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tinggi_badan_cm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_BeratBadan" />
+
+    <EditText
+        android:id="@+id/et_BeratBadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Bmi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Bmi" />
+
+    <EditText
+        android:id="@+id/et_TinggiBadan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/et_BeratBadan"
+        app:layout_constraintTop_toBottomOf="@+id/et_BeratBadan" />
+
+    <TextView
+        android:id="@+id/tv_JenisKelamin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/jenis_kelamin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_TinggiBadan" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/et_TinggiBadan"
+        app:layout_constraintTop_toBottomOf="@+id/et_TinggiBadan">
+
+        <RadioButton
+            android:id="@+id/rb_Pria"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pria" />
+
+        <RadioButton
+            android:id="@+id/rb_Wanita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wanita" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_hitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/hitung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/tv_NilaiBmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/bt_hitung"
+        app:layout_constraintStart_toStartOf="@+id/bt_hitung"
+        app:layout_constraintTop_toBottomOf="@+id/bt_hitung" />
+
+    <TextView
+        android:id="@+id/tv_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_NilaiBmi"
+        app:layout_constraintStart_toStartOf="@+id/tv_NilaiBmi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_NilaiBmi" />
+
+    <Button
+        android:id="@+id/bt_LihatSaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableLeft="@android:drawable/ic_menu_sort_by_size"
+        android:text="@string/lihat_saran"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Bagikan"
+        app:layout_constraintStart_toStartOf="@+id/tv_Status"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Status"
+        android:drawableStart="@android:drawable/ic_menu_sort_by_size" />
+
+    <Button
+        android:id="@+id/bt_Bagikan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="?attr/actionModeShareDrawable"
+        android:text="@string/bagikan"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Status"
+        app:layout_constraintStart_toEndOf="@+id/bt_LihatSaran"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Status"
+        android:drawableStart="?attr/actionModeShareDrawable" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

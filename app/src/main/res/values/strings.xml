@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Assesment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment">fragment</string>
+    <string name="Bmi_text">BMI, atau Body Mass Index merupakan cara untuk menentukan apakah berat badanmu ideal atau tidak. Cobalah sekarang!</string>
+    <string name="berat_badan_kg">Berat Badan (kg)</string>
+    <string name="tinggi_badan_cm">Tinggi Badan (cm)</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="hitung">HITUNG</string>
+    <string name="bagikan">BAGIKAN</string>
+    <string name="lihat_saran">LIHAT SARAN</string>
+</resources>
